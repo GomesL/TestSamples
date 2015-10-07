@@ -26,8 +26,6 @@ public class BufferedReaderToArrayList {
 				if(j==3)
 					b.remove(j);
 			}
-			
-			//sfkjsbdkjfnskldf
 					
 			System.out.println("----------------------");
 			for (String k : b) {
