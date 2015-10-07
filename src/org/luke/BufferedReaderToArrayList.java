@@ -23,9 +23,10 @@ public class BufferedReaderToArrayList {
 			}	
 			
 			for (int j = 0; j < b.size(); j++) {
-				b.remove(j);
+				if(j==3)
+					b.remove(j);
 			}
-			
+					
 			System.out.println("----------------------");
 			for (String k : b) {
 				System.out.println(k);
