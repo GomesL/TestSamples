@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class BufferedReaderToArrayList {
 
@@ -15,21 +17,40 @@ public class BufferedReaderToArrayList {
 		{
 
 			String CurrentLine = br.readLine();
-			String SurrentLine [] = br.readLine().split(" ");
+			String SurrentLine [] = br.readLine().split(",");
 			ArrayList<String> b = new ArrayList<String>(Arrays.asList(SurrentLine));
 			
 			for (String r : b) {
 				System.out.println(r);
-			}	
+			}
+			
+			/*
+			 * Remove specific element from arraylist
+			 */
 			
 			for (int j = 0; j < b.size(); j++) {
 				if(j==3)
 					b.remove(j);
 			}
 					
-			System.out.println("----------------------");
+			/*
+			 * Sort arraylist ascending
+			 */
+
+			Collections.sort(b);
+			
 			for (String k : b) {
 				System.out.println(k);
+			}	
+			
+			/*
+			 * Split by comma and trim unnecessary whitespaces
+			 */
+			
+			String vv = br.readLine();;
+			String []v = vv.trim().split("\\s*,\\s*");
+			for (String z : v) {
+				System.out.println(z);
 			}	
 			
 
